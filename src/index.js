@@ -1,8 +1,8 @@
-import React from 'react';
-import * as ReactDOMClient from 'react-dom/client';
-import App from './App';
+import { createRoot } from 'react-dom/client'
+import App from './App'
 
-const container = document.getElementById('app');
+const container = document.getElementById('app')
 
-// Create *and* render a root with hydration.
-const root = ReactDOMClient.hydrateRoot(container, <App />);
+const root = createRoot(container)
+
+root.render(<App />)
